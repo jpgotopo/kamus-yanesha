@@ -1,0 +1,40 @@
+{
+  "id": "./",
+  "name": "Diccionario Yanesha' – español",
+  "short_name": "Dicc. Yanesha'",
+  "description": "Diccionario e interlineal Yanesha'–español. Se instala en el móvil y funciona entero sin conexión.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f7f9",
+  "theme_color": "#1f4e79",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Diccionario",
+      "url": "./Diccionario-Yanesha-Espanol.html"
+    },
+    {
+      "name": "Interlinear",
+      "url": "./Interlineal-Yanesha-Espanol.html"
+    }
+  ]
+}

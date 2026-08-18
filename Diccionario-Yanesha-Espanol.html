@@ -50,6 +50,31 @@
     color:var(--accent);text-decoration:none;font-size:13px;font-weight:600}
   .xlink:hover{background:var(--accent);color:#fff}
 </style>
+<!-- pwa -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1f4e79" media="(prefers-color-scheme:light)">
+<meta name="theme-color" content="#0f141a" media="(prefers-color-scheme:dark)">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Dicc. Yanesha'">
+<script>
+if ('serviceWorker' in navigator) {
+  addEventListener('load', function () {
+    var had = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker.register('sw.js').catch(function () {});
+    // Tras publicar una versión nueva el SW entrante toma el control; se recarga
+    // una sola vez para no dejar media página con los datos viejos. En la primera
+    // visita no hay controlador previo, así que no se recarga.
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (had && !window.__kamusReloading) { window.__kamusReloading = 1; location.reload(); }
+    });
+  });
+}
+</script>
+<!-- /pwa -->
 </head>
 <body>
 <header><div class="wrap">
