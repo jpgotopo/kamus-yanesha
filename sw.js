@@ -5,7 +5,7 @@
 // que un prefijo común haría que cada idioma le borrase el cache offline a los
 // demás al activarse. El hash hace que solo cambie cuando cambian las páginas.
 const PREFIX = 'kamus' + new URL(self.registration.scope).pathname;
-const CACHE = PREFIX + '56af84ca41';
+const CACHE = PREFIX + '121c73fdd0';
 const ASSETS = [
   "./",
   "./Diccionario-Yanesha-Espanol.html",
